@@ -1,6 +1,9 @@
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 
+const playerHealth = document.getElementById("playerHealth")
+const enemyHealth = document.getElementById("enemyHealth")
+
 canvas.width = 1024;
 canvas.height = 576;
 
@@ -168,6 +171,7 @@ function animate() {
         player.isAttacking){
         console.log("hit")
         player.isAttacking = false;
+        enemyHealth.style.width = "20%"
     }
 
     //detect for collision

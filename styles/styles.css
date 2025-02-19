@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+.relative {
+    position: relative;
+    display: inline-block;
+}
+
+#healthBarHeader {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+#playerHealth {
+    background-color: yellow;
+    height: 30px;
+    width: 100%;
+    margin: 0.5rem;
+}
+
+#timer {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+}
+
+#enemyHealth {
+    background-color: yellow;
+    height: 30px;
+    width: 100%;
+    margin: 0.5rem;
+}
