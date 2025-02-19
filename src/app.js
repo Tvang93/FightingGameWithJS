@@ -1,8 +1,10 @@
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 
-const playerHealth = document.getElementById("playerHealth")
-const enemyHealth = document.getElementById("enemyHealth")
+const playerHealthTotal = document.getElementById("playerHealthTotal")
+const playerHealthLoss = document.getElementById("playerHealthLoss")
+const enemyHealthTotal = document.getElementById("enemyHealthTotal")
+const enemyHealthLoss = document.getElementById("enemyHealthLoss")
 
 canvas.width = 1024;
 canvas.height = 576;
@@ -30,7 +32,8 @@ class Sprite {
         height: 50,
     }
     this.color = color;
-    this.isAttacking
+    this.isAttacking;
+    this.health = 100
   }
 
   draw() {
@@ -171,7 +174,8 @@ function animate() {
         player.isAttacking){
         console.log("hit")
         player.isAttacking = false;
-        enemyHealth.style.width = "20%"
+        enemy.health -= 20;
+        enemyHealthLoss.style.width = `${enemy.health}%`
     }
 
     //detect for collision
@@ -179,6 +183,8 @@ function animate() {
         enemy.isAttacking){
         console.log("counter")
         enemy.isAttacking = false;
+        player.health -= 20;
+        playerHealthLoss.style.width = `${player.health}%`
     }
 }
 

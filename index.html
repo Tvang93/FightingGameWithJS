@@ -9,9 +9,15 @@
 <body>
     <div class="relative">
         <div id="healthBarHeader">
-            <div id="playerHealth"></div>
+            <div class="healthBars justify-end">
+                <div id="playerHealthTotal" class="health-total"></div>
+                <div id="playerHealthLoss" class="health-loss"></div>
+            </div>
             <div id="timer"></div>
-            <div id="enemyHealth"></div>
+            <div class="healthBars">
+                <div id="enemyHealthTotal" class="health-total"></div>
+                <div id="enemyHealthLoss" class="health-loss" style="left: 0;"></div>
+            </div>
         </div>
         <canvas></canvas>
     </div>

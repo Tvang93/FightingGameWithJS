@@ -15,13 +15,6 @@
     margin-top: 0.5rem;
 }
 
-#playerHealth {
-    background-color: yellow;
-    height: 30px;
-    width: 100%;
-    margin: 0.5rem;
-}
-
 #timer {
     background-color: red;
     height: 100px;
@@ -29,9 +22,28 @@
     flex-shrink: 0;
 }
 
-#enemyHealth {
+.health-total {
     background-color: yellow;
     height: 30px;
+    width: 100%
+}
+
+.health-loss {
+    position: absolute;
+    background-color: blue;
+    height: 30px;
+    top: 0; right: 0; bottom: 0;
     width: 100%;
+}
+
+.healthBars {
+    position: relative;
+    width: 100%;
+    height: 30px;
     margin: 0.5rem;
+}
+
+.justify-end {
+    display: flex;
+    justify-content: flex-end;
 }
